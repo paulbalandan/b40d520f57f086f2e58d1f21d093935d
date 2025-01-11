@@ -2,7 +2,7 @@
 
 The test repository.
 
-## Testing [mergeable bot](https://github.com/mergeability/mergeable) locally
+## > Testing [mergeable bot](https://github.com/mergeability/mergeable) locally
 
 * Ensure `smee` is installed globally: `npm install -g smee-client`
 * Check the webhook proxy URL of the GitHub app, either in the `.env` or in the GitHub app's settings.
