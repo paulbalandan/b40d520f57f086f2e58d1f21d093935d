@@ -31,7 +31,7 @@ mergeable:
             Sincerely, the mergeable bot 🤖
       - do: close
   
-  - when: pull_request.opened, pull_request.ready_for_review
+  - when: pull_request.opened, pull_request.ready_for_review, pull_request.synchronize
     filter:
       - do: payload
         pull_request:
