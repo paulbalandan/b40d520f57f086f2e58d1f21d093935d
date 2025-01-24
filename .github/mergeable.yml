@@ -30,3 +30,27 @@ mergeable:
 
             Sincerely, the mergeable bot 🤖
       - do: close
+  
+  - when: pull_request.opened, pull_request.ready_for_review
+    filter:
+      - do: payload
+        pull_request:
+          draft:
+            match: false
+          author_association:
+            must_include:
+              # regex: ^NONE|FIRST_TIMER|FIRST_TIME_CONTRIBUTOR$
+              regex: ^OWNER$
+    pass:
+      - do: comment
+        payload:
+          body: |
+            Hi there, @@author! :wave:
+
+            Thanks for your contribution! :tada:
+
+            I see you are a first-time contributor. Welcome to the CodeIgniter community! :heart:
+
+            I'll assign a maintainer to review your pull request. Please be patient, they will get back to you soon.
+
+            Sincerely, the mergeable bot 🤖
