@@ -12,9 +12,6 @@ mergeable:
               - do: description
                 must_include:
                   regex: '### CodeIgniter Version'
-          - do: author
-            must_include:
-              regex: ^kenjis|lonnieezell|MGatner|michalsn|samsonasik$
     fail:
       - do: comment
         payload:
