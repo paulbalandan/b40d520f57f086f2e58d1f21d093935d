@@ -1,0 +1,25 @@
+name: Carson
+
+on:
+  schedule:
+    - cron: '0 4 * * *'
+  push:
+    branches:
+      - master
+  pull_request_target:
+    types: [opened, synchronize, reopened, edited]
+  pull_request_review:
+    types: [submitted]
+  issues:
+    types: [opened, edited]
+  issue_comment:
+    types: [created]
+
+jobs:
+  carson:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: NexusPHP/carson@a375efda8bd6f4799d17a1bc835f6f7ca1f76f9d
+        with:
+          app_id: ${{ secrets.CARSON_APP_ID }}
+          private_key: ${{ secrets.CARSON_PRIVATE_KEY }}
