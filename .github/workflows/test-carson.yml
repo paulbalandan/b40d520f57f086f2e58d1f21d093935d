@@ -19,7 +19,7 @@ jobs:
   carson:
     runs-on: ubuntu-latest
     steps:
-      - uses: NexusPHP/carson@84d29861578717e439d20e705ed02b7e915b6e07
+      - uses: NexusPHP/carson@b6923bb99a2944e0cd3bcdbb8fdda1957de364eb
         with:
           app_id: ${{ secrets.CARSON_APP_ID }}
           private_key: ${{ secrets.CARSON_PRIVATE_KEY }}
