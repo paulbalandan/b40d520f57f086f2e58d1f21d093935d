@@ -1,3 +1,13 @@
 version: 1
 subscribers:
+  - auto-labeler
+  - conflicts-notifier
+  - lock-old-issues
+  - no-response-closer
+  - pr-title-linter
+  - signed-commits
+  - stale
+  - template-enforcer
+  - thanks
+  - triage-labeler
   - welcome
